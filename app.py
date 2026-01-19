@@ -68,13 +68,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- 2. 資料庫 (Unit 29: 14個單字 - 句子提取核心詞) ---
+# --- 2. 資料庫 (Unit 29: 14個單字 - User Fix) ---
 vocab_data = [
     {"amis": "Mica'edong", "chi": "穿 (衣物)", "icon": "👕", "source": "Row 321"},
     {"amis": "Riko'", "chi": "衣服", "icon": "👗", "source": "Row 321"},
     {"amis": "Mimali", "chi": "打球", "icon": "🏀", "source": "Row 502"},
     {"amis": "Mapolong", "chi": "一起 / 全部", "icon": "👨‍👩‍👧‍👦", "source": "Row 502"},
-    {"amis": "Caliw", "chi": "借", "icon": "🤲", "source": "Row 959"},
+    {"amis": "Caliw", "chi": "借 (詞根)", "icon": "🤲", "source": "User Fix"}, # 修正
     {"amis": "Misanga'", "chi": "做 / 製造", "icon": "🔨", "source": "Row 787"},
     {"amis": "Hako", "chi": "箱子", "icon": "📦", "source": "Row 787"},
     {"amis": "Malalok", "chi": "勤勞 / 努力", "icon": "🐜", "source": "Row 408"},
@@ -116,8 +116,8 @@ raw_quiz_pool = [
     {
         "q": "單字測驗：Caliw",
         "audio": "Caliw",
-        "options": ["借", "買", "賣"],
-        "ans": "借",
+        "options": ["借 (詞根)", "買 (詞根)", "賣 (詞根)"],
+        "ans": "借 (詞根)",
         "hint": "Row 959: Caliwhan... (被借走)"
     },
     {
@@ -177,7 +177,7 @@ if 'init' not in st.session_state:
 
 # --- 5. 主介面 ---
 st.markdown("<h1 style='text-align: center; color: #00838F;'>Unit 29: O 'Orip</h1>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; color: #666;'>生活點滴 (Life & Variety)</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: #666;'>生活點滴 (User Corrected)</p>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["📚 詞彙與句型", "🎲 隨機挑戰"])
 
